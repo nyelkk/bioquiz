@@ -8,8 +8,10 @@
   --header: #D8EDD3;
   --white: #F3F3F3;
   --black: #161616;
+  --gray: #CDCDCD;
   --green: #BEE1B5;
   --green-dark: #387C57;
+  --green-darker: #2e7141;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -1,5 +1,5 @@
-import { climateCrisis } from '@/app/layout';
-import globo from '@/assets/quiz/globo.svg'
+import globo from '@/assets/quiz/globo.svg';
+// import { InitialForm } from '@/components/Quiz/initialForm';
 import { Button } from '@/components/Button';
 import Image from "next/image";
 
@@ -12,12 +12,15 @@ export default function Quiz() {
                 alt="Globo"
             />
 
+            {/* <InitialForm /> */}
             <form className='flex flex-col gap-8 items-center z-[1]'>
-                <h1 className={`${climateCrisis.className}  text-4xl text-center`}>Insira seu <br/> nome:</h1>
+                <h1 className={`text-5xl text-center font-crisis`}>
+                    Insira seu <br/> nome:
+                </h1>
 
                 <label htmlFor="name">
                     <input 
-                        className='p-4 rounded-xl border-[var(--gray)] border-2 text-xl w-96'
+                        className='p-4 rounded-xl border-[var(--gray)] border-2 text-2xl w-96'
                         type="text" 
                         placeholder='Digite aqui' 
                         maxLength={52} 

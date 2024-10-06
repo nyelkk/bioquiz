@@ -1,4 +1,3 @@
-import { climateCrisis } from '@/app/layout';
 import React, { ReactNode } from 'react';
 
 export interface IButton {
@@ -18,7 +17,10 @@ export function Button({
         <button
             onClick={onClick}
             type={type}
-            className={`px-12 py-2 text-xl rounded-md uppercase ${climateCrisis.className} ${isAnswer ? 'shadow-Answer bg-[var(--white)] text-[var(--black)]' : 'shadow-NotAnswer bg-[var(--green-dark)] text-[var(--white)]'}`}
+            className={`px-12 py-2 text-xl rounded-md uppercase font-crisis 
+                ${isAnswer ? 
+                    'shadow-Answer bg-[var(--white)] text-[var(--black)]' 
+                    : 'shadow-NotAnswer bg-[var(--green-dark)] text-[var(--white)]'}`}
         >
             { children }
         </button>

@@ -7,6 +7,10 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    fontFamily: {
+      sans: ['var(--font-poppins)'],
+      crisis: ['var(--font-crisis-climate)']
+    },
     extend: {
       boxShadow: {
         NotAnswer: '0 8px var(--green-darker)',
@@ -15,9 +19,10 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        header: "var(--header)"
-      },
-    },
+        header: "var(--header)",
+        greenDark: "var(--green-dark)"
+      }
+    }
   },
   plugins: [],
 };

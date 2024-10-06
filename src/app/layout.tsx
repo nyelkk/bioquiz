@@ -1,23 +1,15 @@
-// Fonts
-import { Poppins, Climate_Crisis } from 'next/font/google';
+// Component
+import Link from 'next/link';
 // Images
 import logoBioQuiz from '@/assets/logo-black.svg'
 import Image from "next/image";
 // Styles and config's
 import type { Metadata } from "next";
 import "../styles/globals.css";
-// Component
-import Link from 'next/link';
+import { climateCrisis, poppins } from '@/assets/fonts/fonts';
 
-const poppins = Poppins({
-  subsets: ['latin'],
-  weight: ['400', '600', '700']
-});
+// Fonts
 
-export const climateCrisis = Climate_Crisis({
-  subsets: ['latin'],
-  weight: ['400']
-});
 
 export const metadata: Metadata = {
   title: "BioQuiz",
@@ -31,8 +23,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br" className='h-full'>
-      <body className={`${poppins.className} antialiased h-full`}>
-        <header className='bg-header w-full flex justify-start p-10 px-24 absolute top-0'>
+      <body className={`${poppins.variable} ${climateCrisis.variable} font-sans antialiased h-full`}>
+        <header className='bg-header w-full flex justify-start p-10 px-24'>
           <Link href='/'>
             <Image 
               className='w-[170px]'
@@ -42,7 +34,7 @@ export default function RootLayout({
           </Link>
         </header>
 
-        <main className='mx-24 h-full'>
+        <main className='mx-24 h-[80vh]'>
           {children}
         </main>
       </body>
