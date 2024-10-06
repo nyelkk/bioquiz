@@ -12,6 +12,8 @@
   --green: #BEE1B5;
   --green-dark: #387C57;
   --green-darker: #2e7141;
+  --red: #ef5555;
+  --green: #6aef55;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -37,6 +39,7 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
   height: 100vh;
+  overflow: hidden;
 }
 
 @layer utilities {

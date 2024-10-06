@@ -30,9 +30,8 @@ export function QuizGame({ name }: IQuizGame) {
 
     return (
         <>
-            <Link href="/">
+            <Link href="/" className='absolute top-10 left-0 z-[1] lg:w-52 w-14'>
                 <Image
-                    className='absolute top-10 left-0'
                     src={homeBtn}
                     alt="Ícone de volta para Home"
                     onClick={() => {
@@ -46,15 +45,18 @@ export function QuizGame({ name }: IQuizGame) {
             <div className="flex flex-col items-center justify-center text-center gap-8">
             { showResults ?
                 <>
-                    <h1 className="font-crisis text-4xl text-black">
-                        { name } fez <br/> { points }/{ quizQuestions.length } pontos! 
+                    <h1 className="font-crisis lg:text-4xl text-xl text-black">
+                        <span className='text-greenDark'>
+                            { name }
+                        </span>  fez <br/>
+                        { points }/{ quizQuestions.length } pontos! 
                     </h1>
 
-                    <p className="w-1/4">
+                    <p className="lg:w-1/3 w-4/5 text-greenDark font-semibold">
                         Continue aprendendo, compartilhe o que descobriu e faça parte dessa mudança positiva para o meio ambiente. 🌍💚
                     </p>
 
-                    <Link href='/'>
+                    <Link href='/quiz'>
                         <Image 
                             src={restartBtn}
                             alt="Recomeçar quiz"
@@ -72,7 +74,7 @@ export function QuizGame({ name }: IQuizGame) {
                         { points }/{ quizQuestions.length }
                     </span>
 
-                    <p className='font-sans font-bold bg-greenDark p-8 rounded-md text-white text-4xl w-1/3'>
+                    <p className='font-sans font-bold bg-greenDark p-8 rounded-md text-white lg:text-4xl text-xl lg:w-1/2 w-4/5 min-w-[100px]'>
                         { questions[currentQuestion].question }
                     </p>
 
