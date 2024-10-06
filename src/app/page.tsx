@@ -3,7 +3,6 @@ import logoBioQuiz from '@/assets/logo-black.svg';
 import { Button } from '@/components/Button';
 import Image from "next/image";
 import Link from 'next/link';
-import { climateCrisis } from './layout';
 
 export default function Home() {
   return (
@@ -26,7 +25,7 @@ export default function Home() {
         </Link>
       </div>
 
-      <Link href='/qrcode' className={`${climateCrisis.className} underline uppercase text-gray-600 hover:text-gray-500 transition-all duration-150 absolute bottom-4`}>
+      <Link href='/qrcode' className='font-crisis underline uppercase text-gray-600 hover:text-gray-500 transition-all duration-150 absolute bottom-4'>
         Mostrar QRCode
       </Link>
     </div>
