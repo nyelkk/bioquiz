@@ -35,12 +35,12 @@ export function InitialForm() {
         { !startedQuiz ? (
             <>
             <Image
-                className='w-[500px]'
+                className='min-w-[250px] w-[400px] lg:order-1 order-2'
                 src={globo} 
                 alt="Globo"
             />
-            <form onSubmit={onSubmit} className='flex flex-col gap-8 items-center z-[1]'>
-                <h1 className={`font-crisis text-5xl text-center`}>
+            <form onSubmit={onSubmit} className='flex flex-col gap-8 items-center z-[1] order-1'>
+                <h1 className={`font-crisis lg:text-5xl text-3xl text-center`}>
                     Insira seu <br/> nome:
                 </h1>
 

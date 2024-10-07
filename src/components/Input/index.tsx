@@ -1,11 +1,9 @@
-import { FieldError } from 'react-hook-form';
 import React from 'react';
 
 interface InputProps {
   label: string;
   id: string;
   type?: string;
-  error?: FieldError | undefined;
   required?: boolean;
   onChange?: React.ChangeEventHandler<HTMLInputElement>;
 }
@@ -14,9 +12,8 @@ export default function Input({
   label, 
   id, 
   type = 'text', 
-  error, 
   required = true, 
-  onChange 
+  onChange,
 }: InputProps) {
   return (
     <div className="space-y-1">
@@ -31,11 +28,8 @@ export default function Input({
         maxLength={52}
         required={required}
         onChange={onChange}
-        className={`p-4 rounded-xl border-2 text-2xl w-96 
-          ${error ? 'border-red-600' : 'border-gray-300'} 
-          focus:outline-none focus:ring-indigo-500 focus:border-indigo-500`}
+        className={`p-4 rounded-xl border-2 text-2xl lg:w-96 w-64 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500`}
       />
-      {error && <p className="mt-2 text-sm text-red-600">{error.message}</p>}
     </div>
   );
 }
