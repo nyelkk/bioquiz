@@ -27,7 +27,6 @@ export function QuizGame({ name }: IQuizGame) {
         }
     };
 
-
     return (
         <>
         <Link href="/">
@@ -76,10 +75,18 @@ export function QuizGame({ name }: IQuizGame) {
                     { questions[currentQuestion].question }
                 </p>
 
-                <Button isAnswer={true} onClick={() => handlerAnswer(true)}>
+                <Button 
+                    className='hover:bg-green'
+                    isAnswer={true} 
+                    onClick={() => handlerAnswer(true)}
+                >
                     Verdadeiro
                 </Button>
-                <Button isAnswer={true} onClick={() => handlerAnswer(false)}>
+                <Button 
+                    className='hover:bg-red'
+                    isAnswer={true} 
+                    onClick={() => handlerAnswer(false)}
+                >
                     Falso
                 </Button>
             </div>

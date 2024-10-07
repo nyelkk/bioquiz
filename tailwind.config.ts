@@ -21,8 +21,11 @@ const config: Config = {
         foreground: "var(--foreground)",
         header: "var(--header)",
         greenDark: "var(--green-dark)",
+        greenDarker: "var(--green-darker)",
         black: "var(--black)",
         white: "var(--white)",
+        red: "var(--red)",
+        green: "var(--green)"
       }
     }
   },

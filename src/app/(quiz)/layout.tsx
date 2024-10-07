@@ -10,12 +10,12 @@ export default function QuizLayout({
     return (
       <>
         <Image
-            className='absolute z-[-1] left-0 top-20 w-[500px]'
+            className='absolute z-[-1] lg:left-0 left-[-50px] lg:top-20 top-40 w-[500px]'
             src={leftShapes} 
             alt="Shapes"
         />
         <Image
-            className='absolute z-[-1] right-0 bottom-0 w-[300px]'
+            className='absolute z-[-1] right-0 bottom-0 w-[300px] lg:block hidden'
             src={rightShape} 
             alt="Shapes"
         />
