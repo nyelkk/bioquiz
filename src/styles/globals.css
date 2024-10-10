@@ -9,11 +9,11 @@
   --white: #F3F3F3;
   --black: #161616;
   --gray: #CDCDCD;
-  --green: #BEE1B5;
+  --green: #55ef55;
   --green-dark: #387C57;
   --green-darker: #2e7141;
   --red: #ef5555;
-  --green: #6aef55;
+  --red-dark: #7c3838;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,9 +24,11 @@
     --white: #F3F3F3;
     --black: #161616;
     --gray: #CDCDCD;
-    --green: #BEE1B5;
+    --green: #55ef55;
     --green-dark: #387C57;
     --green-darker: #2e7141;
+    --red: #ef5555;
+    --red-dark: #7c3838;
   }
 }
 
@@ -47,3 +49,4 @@ body {
     text-wrap: balance;
   }
 }
+ 
