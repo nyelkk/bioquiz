@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function QRCodePage() {
     return (
         <div className='w-full relative grid items-center'>
-            <Link href="/" className='absolute top-10 left-0 z-[1] lg:w-52 w-14'>
+            <Link href="/" className='absolute top-10 left-0 z-[1] lg:w-52 w-14 active:scale-[0.98]'>
                 <Image
                     className=''
                     src={homeBtn}
