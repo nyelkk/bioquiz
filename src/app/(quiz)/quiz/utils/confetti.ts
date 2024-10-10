@@ -7,8 +7,8 @@ interface IOpts {
   startVelocity?: number;
 } 
 
-let count = 200;
-let defaults = { origin: { y: 0.7 } };
+const count = 200;
+const defaults = { origin: { y: 0.7 } };
 
 function fire(particleRatio: number, opts: IOpts) {
   confetti({
