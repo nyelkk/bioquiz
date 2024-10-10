@@ -7,7 +7,7 @@ import Link from "next/link";
 import { questions, IQuizGame } from './quizGame/types&array';
 import { useState } from 'react';
 import { Button } from '@/components/Button';
-// import ConfettiButton from '@/components/ConfettiButton/ConfettiButton';
+import confetti from 'canvas-confetti';
 
 export function QuizGame({ name }: IQuizGame) {
     const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -28,6 +28,7 @@ export function QuizGame({ name }: IQuizGame) {
         if (quizQuestions[currentQuestion].answer === isTrue) {
             setPoints(points + 1);
             correctAudio.play();
+            conffetisExplosion();
         } else {
             wrongAudio.play();
         }
@@ -48,12 +49,55 @@ export function QuizGame({ name }: IQuizGame) {
         if (!isAnswerSelected) return '';
         if (selectedAnswer === isTrue) {
             return quizQuestions[currentQuestion].answer === isTrue
-                ? '!bg-green !shadow-greenDark' // correct answer
-                : '!bg-red !shadow-redDark'; // wrong answer
+                ? '!bg-greenDark !shadow-greenDark' // correct answer
+                : '!bg-redDark !shadow-redDark'; // wrong answer
         }
         return ''; 
     };
 
+    var count = 200;
+    var defaults = { origin: { y: 0.7 } };
+
+    interface IOpts {
+        spread?: number;
+        decay?: number;
+        scalar?: number;
+        startVelocity?: number;
+    } 
+
+    function fire(particleRatio: number, opts: IOpts) {
+        confetti({
+            ...defaults,
+            ...opts,
+            particleCount: Math.floor(count * particleRatio)
+        });
+    }
+
+    const conffetisExplosion = () => {
+        fire(0.25, {
+            spread: 26,
+            startVelocity: 55,
+            });
+            fire(0.2, {
+            spread: 60,
+            });
+            fire(0.35, {
+            spread: 100,
+            decay: 0.91,
+            scalar: 0.8
+            });
+            fire(0.1, {
+            spread: 120,
+            startVelocity: 25,
+            decay: 0.92,
+            scalar: 1.2
+            });
+            fire(0.1, {
+            spread: 120,
+            startVelocity: 45,
+            });
+    }
+    
     return (
         <>
             <Link href="/" className='absolute top-10 left-0 z-[1] lg:w-52 w-14 active:scale-[0.98]'>
@@ -122,7 +166,6 @@ export function QuizGame({ name }: IQuizGame) {
                         >
                             Falso
                         </Button>
-                        {/* <ConfettiButton /> */}
                     </div>
                 </div>
             }
